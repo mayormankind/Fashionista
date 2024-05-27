@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .gallery{
+    display: grid;
+    grid-template-areas: 
+        "f s"
+        "t s"
+        "t i"
+        "t i"
+        "t i"
+        "p o";
+        ;
+    height: fit-content;
+    div{
+        height: fit-content;
+    }
+    .img1{
+        grid-area: 'f';
+    }
+    .img2{
+        grid-area: 's';
+    }
+    .img3{
+        grid-area: 't';
+    }
+    .img4{
+        grid-area: 'i';
+    }
+    .img5{
+        grid-area: 'p';
+    }
+    .img6{
+        grid-area: 'o';
+    }
+  }
+  @media (min-width: 768px){
+    .gallery{
+        grid-template-areas: 
+            "f s t"
+            "i s t"
+            "i p t"
+            "i p o";
+    } 
+  }

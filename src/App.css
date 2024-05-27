@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
+.gallery {
+  display: grid;
+  grid-template-areas: "f s" "t s" "t i" "t i" "t i" "p o";
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.gallery div {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.gallery .img1 {
+  grid-area: "f";
+}
+.gallery .img2 {
+  grid-area: "s";
+}
+.gallery .img3 {
+  grid-area: "t";
+}
+.gallery .img4 {
+  grid-area: "i";
+}
+.gallery .img5 {
+  grid-area: "p";
+}
+.gallery .img6 {
+  grid-area: "o";
+}
+
+@media (min-width: 768px) {
+  .gallery {
+    grid-template-areas: "f s t" "i s t" "i p t" "i p o";
+  }
+}/*# sourceMappingURL=App.css.map */
