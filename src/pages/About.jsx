@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function About() {
   return (
-    <div className='bg-white py-8 md:py-32'>
+    <div className='bg-white py-8 md:py-32' id='aboutUs'>
         <div className="flex flex-col gap-16 w-full max-w-6xl m-auto p-6 md:p-4 md:flex-row">
             <div className="flex flex-col gap-4 text-lightGray w-full md:w-7/12">
                 <img src="assets/5.webp" alt="" />

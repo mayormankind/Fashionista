@@ -18,8 +18,8 @@ export default function Accessory() {
                         <span className="text-xl text-left text-wrap text-headerBlack font-rufina font-light w-10/12 md:text-5xl">Treat Yourself to New Accessories.</span>
                     </span>
                 </div>
-                <p className="text-[19px] font-normal">We create accessories that perfectly match the outfits.</p>
-                <p className="text-[17px] font-normal">Your look will not be complete without accessories. We create beautiful and sophisticated accessories that highlight your natural beauty.</p> 
+                <p className="text-[19px] font-normal text-[#595959]">We create accessories that perfectly match the outfits.</p>
+                <p className="text-[17px] font-normal text-[#747474]">Your look will not be complete without accessories. We create beautiful and sophisticated accessories that highlight your natural beauty.</p> 
                 <div className="flex flex-col gap-10">
                     {Accessories.map((acc,id)=>(
                         <div className="flex gap-6" key={acc.id}>

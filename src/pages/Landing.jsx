@@ -13,6 +13,7 @@ import Articles from './Articles'
 import SocialHero from './SocialHero'
 import Footer from '../Components/Footer'
 import Contact from './Contact'
+import Collection from './Collection'
 
 export default function Landing() {
   return (
@@ -28,6 +29,7 @@ export default function Landing() {
             <Trendy/>
             <Contact/>
             <Presentation/>
+            <Collection/>
             <Customization/>
             <Articles/>
             <SocialHero/>

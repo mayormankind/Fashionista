@@ -9,8 +9,8 @@ export default function Articles() {
     ]
   return (
     <div className='bg-white py-8 md:py-28'>
-        <div className="flex flex-col gap-16 w-full max-w-6xl m-auto p-6 md:p-4">
-            <div className="flex flex-col text-lightGray gap-4 w-full text-[17px] text-left px-6 md:px-3">
+        <div className="flex flex-col gap-16 w-full max-w-6xl m-auto p-4">
+            <div className="flex flex-col text-lightGray gap-4 w-full text-[17px] text-left px-3">
                 <div className="">
                     <h2 className="text-blackText font-semibold text-[12px]">PRESS</h2>
                     <span className="flex gap-2 items-center w-fit">
@@ -19,7 +19,7 @@ export default function Articles() {
                     </span>
                 </div>
                 <p className="text-[19px] font-normal">Read more about our brand and collection in the articles below.</p>
-                <ul className="flex gap-6 overflow-hidden">
+                <ul className="flex flex-col gap-6 overflow-hidden md:flex-row">
                     {Articles.map((article,id)=>(
                         <ArticleCard img={article.img} key={id} title={article.title} subtitle={article.subtitle} body={article.body}/>
                     ))}
