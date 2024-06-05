@@ -1,5 +1,5 @@
 import React from 'react';
-import '../App.css';
+// import '../App.css';
 
 export default function Gallery() {
   return (
@@ -14,13 +14,13 @@ export default function Gallery() {
                     </span>
                 </div>
                 <p className="text-[19px] font-normal">Stay playful and romantic this spring with the new collection by Jolly House.</p>
-                <ul className="gallery h-full w-full gap-4 md:gap-6">
-                    <div className="img1"><img src="assets/c.webp" alt="" /></div>
-                    <div className="img2"><img src="assets/d.webp" alt="" /></div>
-                    <div className="img3"><img src="assets/f.webp" alt="" /></div>
-                    <div className="img4"><img src="assets/i.webp" alt="" /></div>
-                    <div className="img5"><img src="assets/7.webp" alt="" /></div>
-                    <div className="img6"><img src="assets/m.webp" alt="" /></div>
+                <ul className="h-full w-full gap-6 columns-1 sm:columns-2 md:columns-3">
+                    <li className="mb-6"><img src="assets/c.webp" alt="" className="w-full"/></li>
+                    <li className="mb-6"><img src="assets/i.webp" alt="" className="w-full"/></li>
+                    <li className="mb-6"><img src="assets/d.webp" alt="" className="w-full"/></li>
+                    <li className="mb-6"><img src="assets/7.webp" alt="" className="w-full"/></li>
+                    <li className="mb-6"><img src="assets/f.webp" alt="" className="w-full"/></li>
+                    <li className="mb-6"><img src="assets/m.webp" alt="" className="w-full"/></li>
                 </ul>
             </div>
         </div>
