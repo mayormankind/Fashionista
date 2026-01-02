@@ -21,7 +21,7 @@ export default function Header() {
             <a
               key={id}
               href={nav.href}
-              className="text-white hover:text-gray-900 transition-colors duration-200 relative group"
+              className="text-gray-600 hover:text-gray-900 transition-colors duration-200 relative group"
             >
               {nav.label}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black transition-all duration-200 group-hover:w-full"></span>
