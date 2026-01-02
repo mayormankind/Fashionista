@@ -18,6 +18,13 @@ import Collection from './Collection'
 export default function Landing() {
   return (
     <div className='w-full h-full font-nunito'>
+        {/* Sticky Header - outside all sections */}
+        <div className="hidden md:block">
+          <Header />
+        </div>
+        <div className="md:hidden">
+          <HeaderMobile />
+        </div>
         <div className="w-full flex flex-col">
             <Home/>
             <About/>
