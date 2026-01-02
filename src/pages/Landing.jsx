@@ -14,6 +14,8 @@ import SocialHero from './SocialHero'
 import Footer from '../Components/Footer'
 import Contact from './Contact'
 import Collection from './Collection'
+import Header from '../Components/Header';
+import HeaderMobile from '../Components/HeaderMobile';
 
 export default function Landing() {
   return (
