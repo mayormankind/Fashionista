@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 const Navs = [
   { label: 'Home', href: '#home' },
   { label: 'About Us', href: '#aboutUs' },
-  { label: 'Catalog', href: '#catalog' },
+  { label: 'Catalog', href: '#catlog' },
   { label: 'Collection', href: '#collection' },
   { label: 'Contact Us', href: '#contactUs' },
 ];
