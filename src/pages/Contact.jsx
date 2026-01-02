@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Contact() {
   return (
-    <div className='w-full p-8 flex text-nunito min-h-screen md:py-28'>
+    <div className='w-full p-8 flex text-nunito min-h-screen md:py-28' id="contactUs">
         <div className="flex items-center gap-5 flex-col m-auto p-6 w-full max-w-6xl bg-lightBrown md:p-20">
             <img src="assets/envelope.svg" alt="" className='text-lightBrown w-10 h-10'/>
             <div className="flex flex-col text-center gap-4 items-center">
