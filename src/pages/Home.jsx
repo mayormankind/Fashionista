@@ -1,5 +1,3 @@
-import Header from "../Components/Header";
-import HeaderMobile from "../Components/HeaderMobile";
 import HomeModal from "../Components/HomeModal";
 
 export default function Home() {
