@@ -1,24 +1,34 @@
-import React from 'react'
+// Header.jsx
+import React from 'react';
+
+const Navs = [
+  { label: 'Home', href: '#home' },
+  { label: 'About Us', href: '#aboutUs' },
+  { label: 'Catalog', href: '#catlog' },
+  { label: 'Collection', href: '#collection' },
+  { label: 'Contact Us', href: '#contactUs' },
+];
 
 export default function Header() {
-
-    const Navs = [
-        {label:"Home", href:'#home'},
-        {label:"About us", href:'#aboutUs'},
-        {label:"Catlog", href:'#catlog'},
-        {label:"Collection", href:'#collection'},
-        {label:"Contact us", href:'#contactUs'},
-    ]
   return (
-    <div className='w-full flex p-10 h-fit md:p-0 md:py-10'>
-        <div className="flex justify-between items-center text-white w-full max-w-6xl mx-auto">
-            <img src="assets/logo.svg" alt=""/>
-            <div className="flex space-x-5 items-center font-semibold">
-                {Navs.map((nav,id)=>(
-                    <a href={nav.href} key={id} className='hover:border-b cursor-pointer hover:text-black hover:border-b-black'>{nav.label}</a>
-                ))}
-            </div>
-        </div>
-    </div>
-  )
+    <header className="sticky top-0 z-30 w-full backdrop-blur-md bg-white/10 border-b border-white/20">
+      <div className="flex items-center justify-between px-6 py-4 md:px-10 max-w-6xl mx-auto">
+        <a href="#home" aria-label="Go to homepage">
+          <img src="assets/logo.svg" alt="Company Logo" className="h-8" />
+        </a>
+        <nav className="hidden md:flex space-x-6 font-semibold">
+          {Navs.map((nav, id) => (
+            <a
+              key={id}
+              href={nav.href}
+              className="text-white hover:text-gray-900 transition-colors duration-200 relative group"
+            >
+              {nav.label}
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-black transition-all duration-200 group-hover:w-full"></span>
+            </a>
+          ))}
+        </nav>
+      </div>
+    </header>
+  );
 }
