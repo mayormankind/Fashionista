@@ -11,7 +11,8 @@ const Navs = [
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-30 w-full backdrop-blur-md bg-white/10 border-b border-white/20">
+    //<header className="sticky top-0 z-30 w-full backdrop-blur-md bg-white/10 border-b border-white/20">
+    <header className="fixed top-0 left-0 right-0 z-50 w-full backdrop-blur-md bg-white/10 border-b border-white/20">
       <div className="flex items-center justify-between px-6 py-4 md:px-10 max-w-6xl mx-auto">
         <a href="#home" aria-label="Go to homepage">
           <img src="assets/logo.svg" alt="Company Logo" className="h-8" />
