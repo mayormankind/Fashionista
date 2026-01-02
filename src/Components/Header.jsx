@@ -15,7 +15,7 @@ export default function Header() {
             <img src="assets/logo.svg" alt=""/>
             <div className="flex space-x-5 items-center font-semibold">
                 {Navs.map((nav,id)=>(
-                    <a href={nav.id} key={id} className='hover:border-b cursor-pointer hover:text-black hover:border-b-black'>{nav.label}</a>
+                    <a href={nav.href} key={id} className='hover:border-b cursor-pointer hover:text-black hover:border-b-black'>{nav.label}</a>
                 ))}
             </div>
         </div>
