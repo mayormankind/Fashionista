@@ -19,7 +19,7 @@ import HeaderMobile from '../Components/HeaderMobile';
 
 export default function Landing() {
   return (
-    <div className='w-full font-nunito'>
+    <div className='w-full min-h-screen font-nunito overflow-y-auto'>
         {/* Sticky Header - outside all sections */}
         <div className="hidden md:block">
           <Header />
