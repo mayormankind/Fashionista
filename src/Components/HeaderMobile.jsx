@@ -74,9 +74,9 @@ export default function HeaderMobile() {
             aria-expanded={toggle}
           >
             <div className="space-y-1">
-              <span className="block w-6 h-0.5 bg-white"></span>
-              <span className="block w-6 h-0.5 bg-white"></span>
-              <span className="block w-6 h-0.5 bg-white"></span>
+              <span className="block w-6 h-0.5 bg-gray-500"></span>
+              <span className="block w-6 h-0.5 bg-gray-500"></span>
+              <span className="block w-6 h-0.5 bg-gray-500"></span>
             </div>
           </button>
         </div>
