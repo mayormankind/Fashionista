@@ -24,7 +24,7 @@ export default function HeaderMobile() {
       {/* Overlay */}
       {toggle && (
         <div
-          className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm"
+          className="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm"
           onClick={() => setToggle(false)}
           aria-hidden="true"
         />
@@ -60,8 +60,10 @@ export default function HeaderMobile() {
       </div>
 
       {/* Top Bar */}
-      <header className="sticky top-0 z-30 w-full bg-transparent py-4 px-6">
-        <div className="flex items-center justify-between max-w-6xl mx-auto">
+      {/* <header className="sticky top-0 z-30 w-full bg-transparent py-4 px-6"> */}
+        {/* <div className="flex items-center justify-between max-w-6xl mx-auto"> */}
+      <header className="fixed top-0 left-0 right-0 z-50 w-full bg-transparent py-4 px-6">
+        <div className="flex items-center justify-between max-w-6xl mx-auto w-full">
           <a href="#home" aria-label="Go to homepage">
             <img src="assets/logo.svg" alt="Company Logo" className="h-8" />
           </a>
