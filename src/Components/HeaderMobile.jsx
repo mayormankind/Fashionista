@@ -11,8 +11,15 @@ const Navs = [
 
 export default function HeaderMobile() {
   const [toggle, setToggle] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-  // Close menu on route/hash change (optional but good UX)
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 60);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   useEffect(() => {
     const handleHashChange = () => setToggle(false);
     window.addEventListener('hashchange', handleHashChange);
@@ -60,23 +67,23 @@ export default function HeaderMobile() {
       </div>
 
       {/* Top Bar */}
-      {/* <header className="sticky top-0 z-30 w-full bg-transparent py-4 px-6"> */}
-        {/* <div className="flex items-center justify-between max-w-6xl mx-auto"> */}
-      <header className="fixed top-0 left-0 right-0 z-50 w-full bg-transparent py-4 px-6">
+      <header className={`fixed top-0 left-0 right-0 z-40 w-full px-6 transition-all duration-300 ${
+        scrolled ? 'bg-white shadow-md py-3' : 'bg-white/0 py-4'
+      }`}>
         <div className="flex items-center justify-between max-w-6xl mx-auto w-full">
           <a href="#home" aria-label="Go to homepage">
             <img src="assets/logo.svg" alt="Company Logo" className="h-8" />
           </a>
           <button
             onClick={() => setToggle(true)}
-            className="p-2 rounded-md hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white"
+            className="p-2 rounded-md focus:outline-none"
             aria-label="Open navigation menu"
             aria-expanded={toggle}
           >
-            <div className="space-y-1">
-              <span className="block w-6 h-0.5 bg-gray-500"></span>
-              <span className="block w-6 h-0.5 bg-gray-500"></span>
-              <span className="block w-6 h-0.5 bg-gray-500"></span>
+            <div className="space-y-1.5">
+              <span className="block w-6 h-0.5 bg-[#383838]"></span>
+              <span className="block w-6 h-0.5 bg-[#383838]"></span>
+              <span className="block w-4 h-0.5 bg-[#383838]"></span>
             </div>
           </button>
         </div>

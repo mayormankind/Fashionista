@@ -3,37 +3,112 @@
   scroll-behavior: smooth;
 }
 
+/* ===== SCROLL ANIMATIONS ===== */
+.anim-fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.anim-fade-up.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.anim-fade-in {
+  opacity: 0;
+  transition: opacity 0.9s ease;
+}
+.anim-fade-in.in-view {
+  opacity: 1;
+}
+
+.anim-slide-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.anim-slide-left.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.anim-slide-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.anim-slide-right.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.anim-zoom-in {
+  opacity: 0;
+  transform: scale(0.93);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.anim-zoom-in.in-view {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Stagger delays */
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+.delay-5 { transition-delay: 0.5s; }
+.delay-6 { transition-delay: 0.6s; }
+
+/* ===== HERO ANIMATIONS (load-triggered) ===== */
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-1 { animation: heroFadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.hero-2 { animation: heroFadeUp 0.9s 0.2s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.hero-3 { animation: heroFadeUp 0.9s 0.4s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.hero-4 { animation: heroFadeUp 0.9s 0.65s cubic-bezier(0.16, 1, 0.3, 1) both; }
+
+/* ===== GALLERY GRID ===== */
 .gallery {
   display: grid;
   grid-template-areas: "f s" "t s" "t i" "t i" "t i" "p o";
-  height: -moz-fit-content;
   height: fit-content;
 }
-.gallery div {
-  height: -moz-fit-content;
-  height: fit-content;
-}
-.gallery .img1 {
-  grid-area: "f";
-}
-.gallery .img2 {
-  grid-area: "s";
-}
-.gallery .img3 {
-  grid-area: "t";
-}
-.gallery .img4 {
-  grid-area: "i";
-}
-.gallery .img5 {
-  grid-area: "p";
-}
-.gallery .img6 {
-  grid-area: "o";
-}
+.gallery div { height: fit-content; }
+.gallery .img1 { grid-area: f; }
+.gallery .img2 { grid-area: s; }
+.gallery .img3 { grid-area: t; }
+.gallery .img4 { grid-area: i; }
+.gallery .img5 { grid-area: p; }
+.gallery .img6 { grid-area: o; }
 
 @media (min-width: 768px) {
   .gallery {
     grid-template-areas: "f s t" "i s t" "i p t" "i p o";
   }
-}/*# sourceMappingURL=App.css.map */
+}
+
+/* ===== HIDE SCROLLBAR ===== */
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* ===== STAGGER CASCADE ===== */
+/* When a parent has in-view, trigger animations on its children too */
+.in-view .anim-fade-up   { opacity: 1; transform: translateY(0); }
+.in-view .anim-fade-in   { opacity: 1; }
+.in-view .anim-slide-left  { opacity: 1; transform: translateX(0); }
+.in-view .anim-slide-right { opacity: 1; transform: translateX(0); }
+.in-view .anim-zoom-in   { opacity: 1; transform: scale(1); }
+
+/* ===== CAROUSEL ===== */
+.carousel-track {
+  display: flex;
+  transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+}
